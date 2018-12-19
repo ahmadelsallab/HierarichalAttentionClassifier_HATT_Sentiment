@@ -199,7 +199,7 @@ class AttLayer(Layer):
         #return weighted_input.sum(axis=1)
 	return np.sum(weighted_input, axis=1)
 
-    def get_output_shape_for(self, input_shape):
+    def compute_output_shape(self, input_shape):
         return (input_shape[0], input_shape[-1])
 
 sentence_input = Input(shape=(MAX_SENT_LENGTH,), dtype='int32')
